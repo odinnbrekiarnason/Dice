@@ -66,9 +66,6 @@ class _State extends State<Dice> {
       });
       print("6");
     }
-    else if (randomNumber == "7"){
-      print("7");
-     }
   }
 
   @override
