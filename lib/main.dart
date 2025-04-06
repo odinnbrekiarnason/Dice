@@ -64,7 +64,6 @@ class _State extends State<Dice> {
       dice == 6;
       side = sides[5];
       });
-      print("6");
     }
   }
 
