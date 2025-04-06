@@ -23,10 +23,10 @@ class _State extends State<Dice> {
     "assets/images/dice-6.png"
 
   ];
-  String side = "";
+  String side = "assets/images/dice-1.png";
 
   void rollDice() {
-    int random = Random().nextInt(6);
+    int random = Random().nextInt(7);
     String randomNumber = random.toString();
 
      if (randomNumber == "1") {
@@ -64,7 +64,11 @@ class _State extends State<Dice> {
       dice == 6;
       side = sides[5];
       });
+      print("6");
     }
+    else if (randomNumber == "7"){
+      print("7");
+     }
   }
 
   @override
@@ -75,16 +79,15 @@ class _State extends State<Dice> {
           title: Text("Klikkaður titill",
             style: TextStyle(color: Colors.black
             )
-            ,)
+         ,)
           ,),
             body: Center(
               child:
               ElevatedButton(onPressed: rollDice,
                 child: Image.asset("$side"),
               ),
-              )
-
-            ),
-        );
+            )
+        ),
+    );
   }
 }
